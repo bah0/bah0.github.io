@@ -15,6 +15,7 @@
 		<div id="helper">
 		<div id="main">
 		<div id="content">
+			<div id="custom">
 			<div id="row0" >
 				<form action="javascript:search(this);">
 					<div id="div_inp">
@@ -24,13 +25,9 @@
 				  </div>
 				</form>
 			</div>
-
-			<div id="yt">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUoDnZk4KE80eAjE7N2OwwuXMO1hHOPfi" frameborder="0" allowfullscreen></iframe>
-			</div>
-
+			<div id="links">
 			<div id="row_greet">
-				<p id="help" class="hidden">search: default google;  !g...google</p>
+				<p id="help" class="hidden">search: !g 'query';  !g: google // !y: youtube // !r: reddit |</p>
 				<p class="center">welcome, bah0!</p>
 							</div>
 			<div id="row1">
@@ -53,8 +50,8 @@
 						<ul>
 							<li> <a target="_blank" href="https://github.com">github</a>
 							<li> <a target="_blank" href="http://wallhaven.cc">wallhaven</a>
-							<li> 3
-							<li> 4
+							<li> <a target="_blank" href="http://amazon.de">amazon</a>
+							<li> <a target="_blank" href="http://geizhals.at">geizhals</a>
 						</ul>
 					</li>
 
@@ -74,8 +71,17 @@
 				</ul>
 
 		</div>
-		<div id="row2"><p>bah0 @ aster0id</p></diV>
+	</div>
+			<div id="yt" class="hidden">
+				<iframe width="990" height="600" src="https://www.youtube.com/embed/videoseries?list=PLUoDnZk4KE80eAjE7N2OwwuXMO1hHOPfi" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div id="row2">
+					<div id="user">bah0 @ aster0id</div>
 
+					<div id="swlinks" onclick="swlinks();"></div>
+					<div id="swvids" onclick="swvids();"></div>
+			</div>
+		</div>
 		</div>
 		</div>
 		</div>

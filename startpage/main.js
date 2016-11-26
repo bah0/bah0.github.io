@@ -1,16 +1,20 @@
-function check() {
-    if (typeof $.cookie('token') === 'undefined'){
-      alert("no");
-      } else {
-      alert("yes");
-  }
+function swvids(){
+  document.getElementById("links").className = "hidden";
+  document.getElementById("yt").className = "";
 }
 
+function swlinks(){
+  document.getElementById("links").className = "";
+  document.getElementById("yt").className = "hidden";
+}
+
+var hide = 1;
 function search(searchForm) {
   var searchQuery = document.getElementById("search").value;
   if(searchQuery.startsWith("!")){ // Command Mode
     if(searchQuery.startsWith("!?")) {
-
+      document.getElementById("help").className = (hide==1 ? "" : "hidden");
+      hide=(hide==1 ? 0 : 1);
     }
     else if (searchQuery.startsWith("!y")){ // youtube
       openYoutube(searchQuery.substring(3));

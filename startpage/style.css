@@ -26,7 +26,11 @@ a:active{
 }
 
 #help {
-	color: #7a7a7a;
+	color: black;
+  background: #E2CB97;
+  border-left: 2px solid #87795A;
+  padding-left: 5px;
+  margin-bottom: 10px;
 }
 
 p {
@@ -61,8 +65,9 @@ div {
 }
 
 #yt{
-	background:;
-  padding-top: 5px;
+	background:#2a2a2a77;
+  padding: 5px;
+
 }
 
 #yt iframe {
@@ -76,10 +81,15 @@ div {
 	margin: 0 auto;
 	width: 1000px;
 	min-width: 400px;
-	background:#2a2a2a77;
 	max-width:1000px;
-	border: 3px solid #0f0f0f;
+  max-height: 700px;
+	border: 1px solid #0f0f0f;
 	overflow: auto;
+}
+
+#custom{
+	background:#2a2a2a77;
+  width: 100%;
 }
 
 .margin-fix {
@@ -105,7 +115,8 @@ div {
 }
  .menu  li::before {
 	 content: "> ";
-	 color: black;
+	 /*color: black;*/
+   color: #7a7a7a;
  }
 
  .menu li {
@@ -133,12 +144,12 @@ form {
 
 #div_time{
 	width: 195px;
-	height: 21px;
+	height: 20.5px;
 	background-color: #0f0f0f;
 	float: left;
 	color: white;
 	text-align: right;
-	line-height: 20px;
+	line-height: 20.5px;
 	font-family: "GohuFont", monospace;
 	font-size: 11px;
 	font-weight: normal;
@@ -203,10 +214,14 @@ input::before{
 	color: white;
 	font-family: "GohuFont", monospace;
 	font-size: 11px;
+  line-height: 15px;
 	background: #0f0f0f;
 	font-weight: normal;
-	line-height: 11px;
-	padding: 5px;
+	padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  clear:left;
 }
 
 #col0 {
@@ -221,4 +236,49 @@ input::before{
 }
 
 #col3 {
+}
+
+#swlinks {
+  background:#2a2a2a;
+  width: 15px;
+  height: 15px;
+  float: left;
+  text-align: center;
+  margin-left: 5px;
+  color: white;
+  font-family: "GohuFont", monospace;
+  font-size: 11px;
+  line-height: 15px;
+}
+#swlinks:hover, #swvids:hover{
+  cursor:pointer;
+}
+
+#swvids {
+  color: white;
+  font-family: "GohuFont", monospace;
+  font-size: 11px;
+  line-height: 15px;
+  background:#cc181e;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  float: left;
+  margin-left: 5px;
+}
+
+#links {
+  float: left;
+  width: calc(100%);
+}
+
+#user {
+  font-family: "GohuFont", monospace;
+  font-size: 11px;
+  float:left;
+  overflow:auto;
+  height:100%;
+  width:calc(100% - 40px);
+  line-height:15px;
+
 }
