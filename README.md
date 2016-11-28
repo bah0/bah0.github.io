@@ -1,4 +1,5 @@
 bah0.github.io
 ==============
 
-just testing some things...
+Startpages: ./startpages
+ * aster0id
