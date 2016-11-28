@@ -22,12 +22,24 @@ function search(searchForm) {
     else if (searchQuery.startsWith("!g")){ // google
       openDefault(searchQuery.substring(3));
     }
-    else if (searchQuery.startsWith("!r")){ // google
+    else if (searchQuery.startsWith("!r")){ // reddit
       openReddit(searchQuery.substring(3));
     }
+	else if (searchQuery.startsWith("!ddg")){ // duckduckgo
+	  openDuckDuckGo(searchQuery.substring(5));
+	}
   }
   else {
     openDefault(searchQuery); //google
+  }
+}
+
+function openDuckDuckGo(query){
+  var win = window.open('https://duckduckgo.com/?q='+query, '_blank');
+  if (win) {
+  win.focus();
+  } else {
+  alert('Please allow popups for this website');
   }
 }
 
