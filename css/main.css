@@ -1,0 +1,191 @@
+/*	author: baho
+	main.css - bah0.github.io
+*/
+
+:root {
+	--border: #2a2a2a;
+	--pre: #1f1f1f;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #000;
+	background: white;
+}
+
+a:visited {
+
+}
+
+a:active{
+
+}
+
+a:link {
+
+}
+
+html, body {
+	color: #fff;
+	background: #1b1b1b;
+	height: 100%;
+	font-family: GohuFont;
+	font-size: 11px;
+}
+
+#info {
+	background: ;
+	float:left;
+	height: calc(100%  - 0px);
+	overflow: hidden;
+	padding: 0px;
+	width: 249px;
+	border-right: 0px solid #2a2a2a;
+}
+
+#header {
+	background: ;
+	height: 50px;
+	width: calc(100% - 1px);
+	border-bottom: 1px dashed var(--border);
+	border-right: 1px solid var(--border);
+}
+
+#header > p {
+	line-height: 50px;
+	background: #121212;
+	text-align: center;
+	
+}
+
+#header > p >  span {
+	/*border-left: 1px dashed white;
+	background: white;
+	padding-left: 3px;*/
+}
+
+#header > p >  span:hover {
+}
+
+#nav {
+	background: #121212;
+	min-height: 400px;
+	overflow: auto;
+	width: calc(100% -1px);
+	border-bottom:1px dashed var(--border);
+	border-right:1px solid var(--border);
+}
+
+#nav-list {
+	width: calc(100% - 15px);
+	border-bottom:1px dashed var(--border);
+	overflow: auto;
+	background: ;	
+	padding-left: 15px;
+	padding-bottom: 10px;
+}
+
+#nav-list > p {
+	padding-top: 10px;
+	padding-bottom: 2px;
+	text-decoration: underline;
+}
+
+#nav-list > ul > li {
+	padding: 3px;
+	background:;
+}
+
+li:before {
+	content: "├";
+}
+
+li:last-child:before {
+	content: "└";
+}
+
+#footer {
+	width: calc(100% - 1px);
+	background: #121212;
+	border-bottom: 1px solid var(--border);
+	border-right: 1px solid var(--border);
+	min-height: 100px;
+}
+
+#status > p, #footer > p {
+	text-align:center;
+	padding: 5px;
+}
+
+/**************************/
+
+#container {
+	background: ;
+	display: flex;
+	float: left;
+	min-height:500px;
+	overflow: auto;	
+	padding-bottom: 0px;
+	width: calc( 100% - 250px);
+}
+
+#content {
+	background: #171717;
+	padding: 10px;
+	min-width: 700px;
+	max-width: 900px;
+	border-bottom: 1px solid var(--border);
+	width: calc(75% - 10px);
+}
+
+#status {
+	background: #171717;
+	display: block;
+	width: 25%;
+	min-width: 200px;
+	border-left: 1px dashed var(--border);
+	border-bottom: 1px solid var(--border);
+}
+
+pre {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right:15px;
+	background: var(--pre);
+	overflow: auto;
+	padding: 5px;
+	border: 1px solid var(--border);
+}
+
+@media (max-width: 1200px) {
+	#status {
+		display:none;
+	}
+	#content {
+		max-width: 1255px;
+		width: calc(100% - 10px);
+	}
+	
+}
+
+@media (max-width: 970px) {
+	#info{
+	width: 160px;
+	}
+	#status{
+		display: none;
+	}
+	#container {
+	
+		width: calc(100% - 160px);
+	}
+	#content {
+		min-width: 400px;
+		max-width: 970px;
+	}
+	
+}
