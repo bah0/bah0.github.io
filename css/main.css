@@ -2,6 +2,13 @@
 	main.css - bah0.github.io
 */
 
+@font-face {
+font-family: 'GohuFont';
+src:
+    local('GohuFont'),
+    url('gohufont-11.ttf');
+}
+
 :root {
 	--border: #2a2a2a;
 	--pre: #1f1f1f;
