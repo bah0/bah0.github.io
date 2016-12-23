@@ -5,8 +5,8 @@
 @font-face {
 font-family: 'GohuFont';
 src:
-    local('GohuFont'),
-    url('gohufont-11.ttf');
+    url('gohufont-11.ttf')
+    format('truetype');
 }
 
 :root {
@@ -39,7 +39,7 @@ html, body {
 	color: #fff;
 	background: #1b1b1b;
 	height: 100%;
-	font-family: GohuFont;
+	font-family: 'GohuFont';
 	font-size: 11px;
 }
 
