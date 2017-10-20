@@ -36,7 +36,7 @@ function search(searchForm) {
 
 function openDuckDuckGo(query){
   query = encodeURIComponent(query);
-  var win = window.open('https://duckduckgo.com/?q='+query);
+  var win = window.open('https://duckduckgo.com/?q='+query, "_self");
   if (win) {
   win.focus();
   } else {
@@ -46,7 +46,7 @@ function openDuckDuckGo(query){
 
 function openReddit(query){
   query = encodeURIComponent(query);
-  var win = window.open('https://www.reddit.com/r/'+query);
+  var win = window.open('https://www.reddit.com/r/'+query, "_self");
   if (win) {
   win.focus();
   } else {
@@ -56,7 +56,7 @@ function openReddit(query){
 
 function openYoutube(query){
   query = encodeURIComponent(query);
-  var win = window.open('https://www.youtube.com/results?search_query='+query.replace(/\s/g, "+"));
+  var win = window.open('https://www.youtube.com/results?search_query='+query.replace(/\s/g, "+"),"_self");
   if (win) {
   win.focus();
   } else {
@@ -66,7 +66,7 @@ function openYoutube(query){
 
 function openDefault(query){
   query = encodeURIComponent(query);
-  var win = window.open('https://www.google.com/search?q='+query.replace(/\s/g, "+"));
+  var win = window.open('https://www.google.com/search?q='+query.replace(/\s/g, "+"),"_self");
   if (win) {
   win.focus();
   } else {
