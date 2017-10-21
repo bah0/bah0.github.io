@@ -1,3 +1,15 @@
+var hideAdd = 1
+function swadd(){
+	document.getElementById("addcontent").className= (hide==1 ? "" : "hidden");
+	hide=(hide==1 ? 0 : 1)
+}
+
+function saveAdd(){
+	//alert("Saved!");
+	
+}
+
+
 function swvids(){
   document.getElementById("links").className = "hidden";
   document.getElementById("yt").className = "";

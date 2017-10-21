@@ -9,9 +9,11 @@
 
 		<script src="./jscookie.js"></script>
 		<script src="./main.js"></script>
+		
 			</head>
 
 	<body onload="startTime();freader();">
+		
 		<div id="helper">
 		<div id="main">
 		<div id="content">
@@ -82,12 +84,20 @@
 			<div id="row2">
 					<div id="user">bah0 @ aster0id</div>
 
+					
 					<div id="swlinks" onclick="swlinks();"></div>
 					<div id="swvids" onclick="swvids();"></div>
+					<div id="swadd"  onclick="swadd();"></div>
 			</div>
 		</div>
 		</div>
 		</div>
+		</div>
+		
+		<div id="addcontent" class="hidden">
+			<input id="hostnameInp" placeholder="hostname" name="hostname" type="text" /> 
+			<button id="saveBtn" name="save" onclick="saveAdd();">Save</button>
+			<button id="closeAdd" name="close" onclick="swadd();" >Close Editing</button>
 		</div>
 	</body>
 </html>
