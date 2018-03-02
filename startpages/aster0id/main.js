@@ -3,10 +3,22 @@ function swadd(){
 	document.getElementById("addcontent").className= (hide==1 ? "" : "hidden");
 	hide=(hide==1 ? 0 : 1)
 }
+function handleStorage(){
+  if(typeof(Storage) !== "undefined"){
+    //alert("Storage defined");
+    return true;
+     } else {
+    return false;
+  }
+}
 
 function saveAdd(){
 	//alert("Saved!");
-	
+  if(handleStorage()){
+    localStorage.setItem("hostname",document.getElementById("hostnameInp").value);
+  }
+
+  freader();	
 }
 
 
@@ -105,4 +117,7 @@ function checkTime(i) {
 
 function freader(){
   document.getElementById("col3").innerHTML = Cookies.get("startpage");
+  if(handleStorage()){
+    document.getElementById("user").innerHTML = "bah0 @ "+localStorage.getItem("hostname");
+  }
 }
