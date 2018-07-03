@@ -7,7 +7,7 @@ function importJSON(obj){
 		// column div tags
 		for(var i = 0; i < liveObj.cols.length; i++){
 			document.getElementById("divFavs").innerHTML += '<div id="col'+i+'" class="col"><div id="name'+i+'" class="row name">/main</div><div class="row output"><ul id="links'+i+'" class="menu margin-fix"></ul></div></div>';
-			document.getElementById("name"+i).innerHTML = "~> tree "+liveObj.cols[i].title;
+			document.getElementById("name"+i).innerHTML = ""+liveObj.cols[i].title;
 			for(var j=0; j < liveObj.cols[i].links.length;j++){
 				document.getElementById("links"+i).innerHTML += '<li><a  href="'+liveObj.cols[i].links[j].uri+'">'+liveObj.cols[i].links[j].name+'</a>';
 			}
