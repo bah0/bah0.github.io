@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+p{
+	background:red;
+}
+
+div {
+	text-align: center;
+	border: 0px solid black;
+}
+
+.paddingtop {
+	padding-top: 20px;
+}
+
+.output{
+}
+
+.name {
+	padding-left:25px;
+}
+
+.margin-fix {
+	margin-left: 5px !important;
+}
+
+.hidden{ display: none !important;}
+
+.menu {
+
+	background: transparent;/*#2f2f2f44;*/
+	list-style: none;
+	padding: 0px;
+	padding-left:35px;
+	margin: 0;
+	text-align: center;
+	font-weight: normal;
+	color: #7a7a7a;
+
+}
+.menu {
+
+	background: transparent;/*#2f2f2f44;*/
+	list-style: none;
+	padding: 0px;
+	padding-left:35px;
+	margin: 0;
+	text-align: center;
+	font-weight: normal;
+	color: #7a7a7a;
+
+}
+
+ .menu  li:last-child::before {
+	content: "└ ";
+	color: #7a7a7a;
+ }
+.menu  li:last-child:hover::before {
+	content: "└ ";
+	color: #00c8ff;
+ }
+
+ .menu  li::before {
+	content: "├ ";
+	color: #7a7a7a;
+ }
+.menu  li:hover::before {
+	content: "├ ";
+	color: #00c8ff;
+ }
+ 
+ .menu li {
+	 background:;
+ 	text-align: left;
+	padding: 0px;
+	padding-top: 0px;
+ }
+
+#time {
+	font-size: 48px;
+}
+#date {
+	
+	padding-bottom:25px;
+}
+
+input {
+	
+border: 1px solid #d2dae0;
+padding:3px;
+padding-left:10px;
+border-radius:3px;
+margin: 5px;
+}
+
+#search {
+width: 100%;
+margin: auto;
+}
+
+.jumbotron {
+	background:#f9f9f9 !important;
+}
+
+
+body {
+    overflow:hidden;
+}
+*{font-family: 'Dosis', sans-serif;
+}
+
+
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
