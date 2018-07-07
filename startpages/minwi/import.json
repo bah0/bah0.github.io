@@ -1,0 +1,45 @@
+{
+	"cols":[
+		{
+			"title": "/main",
+			"links": [
+				{"name":"gmail", "uri":"https://mail.google.com"},
+				{"name":"outlook", "uri":"https://outlook.com"},
+				{"name":"george", "uri":"https://george.sparkasse.at"},
+				{"name":"paypal", "uri":"https://paypal.com"},
+				{"name":"amazon", "uri":"https://www.amazon.de/"},
+				{"name":"geizhals", "uri":"http://geizhals.at"}
+				
+			]
+		},
+		{
+			"title": "/tech",
+			"links": [
+				{"name":"github", "uri":"https://github.com"},
+				{"name":"archlinux", "uri":"http://archlinux.org"},
+				{"name":"root-me.org", "uri":"https://www.root-me.org/"}
+			]
+		},
+		{
+			"title": "/social",
+			"links": [
+				{"name":"reddit", "uri":"https://reddit.com"},
+				{"name":"4chan", "uri":"http://www.4chan.org/"},
+				{"name":"tumblr", "uri":"https://www.tumblr.com/"},
+				{"name":"twitter", "uri":"https://www.twitter.com/"}
+				
+			]
+		},
+		{
+			"title": "/entertainment",
+			"links": [
+				{"name":"youtube", "uri":"https://youtube.com"},
+				{"name":"netflix", "uri":"https://netflix.com"},
+				{"name":"gmusic", "uri":"https://play.google.com/music/"},
+				{"name":"gdrive", "uri":"https://drive.google.com"},
+				{"name":"gkeep", "uri":"https://keep.google.com"},
+				{"name":"wallhaven", "uri":"https://alpha.wallhaven.cc/"}
+			]
+		}
+	]
+}
