@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
-p{
-	background:red;
-}
-
 div {
 	text-align: center;
-	border: 0px solid black;
 }
 
 .paddingtop {
@@ -37,19 +32,7 @@ div {
 
 .menu {
 
-	background: transparent;/*#2f2f2f44;*/
-	list-style: none;
-	padding: 0px;
-	padding-left:35px;
-	margin: 0;
-	text-align: center;
-	font-weight: normal;
-	color: #7a7a7a;
-
-}
-.menu {
-
-	background: transparent;/*#2f2f2f44;*/
+	background: none;/*#2f2f2f44;*/
 	list-style: none;
 	padding: 0px;
 	padding-left:35px;
@@ -88,8 +71,7 @@ div {
 #time {
 	font-size: 48px;
 }
-#date {
-	
+#date {	
 	padding-bottom:25px;
 }
 
@@ -115,10 +97,9 @@ margin: auto;
 body {
     overflow:hidden;
 }
-*{font-family: 'Dosis', sans-serif;
+*{
+	font-family: 'Dosis', sans-serif;
 }
-
-
 
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */

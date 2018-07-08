@@ -1,33 +1,26 @@
+ 
 
+var liveObj; // json object for links
 
-var liveObj;
-
+// populate links list
 function importJSON(obj){
     liveObj = null;
 		liveObj = JSON.parse(obj);
-    // column div tags
     document.getElementById("divFavs").innerHTML = "";
-		for(var i = 0; i < liveObj.cols.length; i++){
+    for(var i = 0; i < liveObj.cols.length; i++){
 			document.getElementById("divFavs").innerHTML += '<div id="col'+i+'" class="col"><div id="name'+i+'" class="row name">/main</div><div class="row output"><ul id="links'+i+'" class="menu margin-fix"></ul></div></div>';
 			document.getElementById("name"+i).innerHTML = ""+liveObj.cols[i].title;
 			for(var j=0; j < liveObj.cols[i].links.length;j++){
 				document.getElementById("links"+i).innerHTML += '<li><a  href="'+liveObj.cols[i].links[j].uri+'">'+liveObj.cols[i].links[j].name+'</a>';
-			}
-			
-		}
-		
-		
-		
-}
-
-function buildFavorites(){
-	
+			}	
+		}		
 }
 
 function downloadJSON(){
   download("export.json",JSON.stringify(liveObj));
 }
 
+// local file download hack
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -41,22 +34,7 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
-
-
-function loadJSON(callback) {   
-
-  var xobj = new XMLHttpRequest();
-      xobj.overrideMimeType("application/json");
-  xobj.open('GET', 'my_data.json', true); // Replace 'my_data' with the path to your file
-  xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-          callback(xobj.responseText);
-        }
-  };
-  xobj.send(null);  
-}
-
+// save links to localStorage
 function saveJSON(){
 	if (typeof(Storage) !== "undefined") {
 		localStorage.setItem("favorites",JSON.stringify(liveObj));
@@ -65,6 +43,7 @@ function saveJSON(){
 	}
 }
 
+// check localStorage support
 function checkLocalStorage(){
 	if (typeof(Storage) !== "undefined") {
 		importJSON(localStorage.getItem("favorites"));
@@ -73,8 +52,7 @@ function checkLocalStorage(){
 	}
 }
 
-////////////////////////
-
+// clock code
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -88,12 +66,16 @@ function startTime() {
     var t = setTimeout(startTime, 500);
 }
 
+// add zero in front of numbers < 10
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i}; 
     return i;
 }
 
-var hide = 1;
+// search functions
+
+var hide = 1; //help
+
 function search(searchForm) {
   var searchQuery = document.getElementById("search").value;
   if(searchQuery.startsWith("!")){ // Command Mode
