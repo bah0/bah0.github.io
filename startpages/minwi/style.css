@@ -13,7 +13,16 @@ div {
 	padding-top: 20px;
 }
 
-.output{
+.debug{
+	border:1px solid red;
+}
+
+.butn {
+	margin-left: 10px;
+}
+
+.fixed-bottom{
+	padding-bottom: 10px;
 }
 
 .name {
@@ -70,7 +79,7 @@ div {
  }
  
  .menu li {
-	 background:;
+	 background: none;
  	text-align: left;
 	padding: 0px;
 	padding-top: 0px;

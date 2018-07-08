@@ -3,8 +3,10 @@
 var liveObj;
 
 function importJSON(obj){
+    liveObj = null;
 		liveObj = JSON.parse(obj);
-		// column div tags
+    // column div tags
+    document.getElementById("divFavs").innerHTML = "";
 		for(var i = 0; i < liveObj.cols.length; i++){
 			document.getElementById("divFavs").innerHTML += '<div id="col'+i+'" class="col"><div id="name'+i+'" class="row name">/main</div><div class="row output"><ul id="links'+i+'" class="menu margin-fix"></ul></div></div>';
 			document.getElementById("name"+i).innerHTML = ""+liveObj.cols[i].title;
@@ -20,6 +22,39 @@ function importJSON(obj){
 
 function buildFavorites(){
 	
+}
+
+function downloadJSON(){
+  download("export.json",JSON.stringify(liveObj));
+}
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+
+
+function loadJSON(callback) {   
+
+  var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+  xobj.open('GET', 'my_data.json', true); // Replace 'my_data' with the path to your file
+  xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+          callback(xobj.responseText);
+        }
+  };
+  xobj.send(null);  
 }
 
 function saveJSON(){
