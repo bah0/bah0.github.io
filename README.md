@@ -1,5 +1,4 @@
 bah0.github.io
 ==============
 
-Startpages: ./startpages
- * aster0id
+My github webspace, yayy :D
